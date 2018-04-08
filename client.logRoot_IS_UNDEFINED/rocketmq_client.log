@@ -1,0 +1,210 @@
+2018-03-02 17:35:13 INFO main - user specified name server address: 100.125.1.186:9876
+2018-03-02 17:35:13 INFO main - created a new client Instance, FactoryIndex: 0 ClinetID: 172.20.1.177@83854 ClientConfig [namesrvAddr=100.125.1.186:9876, clientIP=172.20.1.177, instanceName=83854, clientCallbackExecutorThreads=8, pollNameServerInteval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000] V3_2_6_SNAPSHOT
+2018-03-02 17:35:13 INFO main - createChannel: begin to connect remote host[100.125.1.186:9876] asynchronously
+2018-03-02 17:35:13 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => /100.125.1.186:9876
+2018-03-02 17:35:16 WARN main - createChannel: connect remote host[100.125.1.186:9876] timeout 3000ms, DefaultChannelPromise@5ea434c8(uncancellable)
+2018-03-02 17:35:16 INFO PullMessageService - PullMessageService service started
+2018-03-02 17:35:16 INFO RebalanceService - RebalanceService service started
+2018-03-02 17:35:16 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2018-03-02 17:35:16 INFO main - the client factory [172.20.1.177@83854] start OK
+2018-03-02 17:35:16 INFO main - the producer [ProducerGroupName] start OK
+2018-03-02 17:35:19 WARN main - createChannel: connect remote host[100.125.1.186:9876] timeout 3000ms, DefaultChannelPromise@5ea434c8(uncancellable)
+2018-03-02 17:35:19 WARN main - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+	at com.alibaba.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:641)
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1298)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:573)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:549)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:595)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:485)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1031)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1025)
+	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:95)
+	at com.example.mq2.Test.sendMsg(Test.java:39)
+	at com.example.mq2.Test.main(Test.java:24)
+2018-03-02 17:35:19 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer tryLock timeout 3000ms
+2018-03-02 17:35:22 WARN main - createChannel: connect remote host[100.125.1.186:9876] timeout 3000ms, DefaultChannelPromise@5ea434c8(uncancellable)
+2018-03-02 17:35:22 WARN main - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+	at com.alibaba.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:641)
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getDefaultTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1264)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:560)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:603)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:485)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1031)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1025)
+	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:95)
+	at com.example.mq2.Test.sendMsg(Test.java:39)
+	at com.example.mq2.Test.main(Test.java:24)
+2018-03-02 17:35:22 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer tryLock timeout 3000ms
+2018-03-02 17:35:22 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2018-03-02 17:35:22 INFO main - shutdown thread PullMessageService interrupt true
+2018-03-02 17:35:22 INFO PullMessageService - PullMessageService service end
+2018-03-02 17:35:22 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2018-03-02 17:35:22 INFO main - closeChannel: begin close the channel[] Found: false
+2018-03-02 17:35:22 INFO main - closeChannel: the channel[] has been removed from the channel table before
+2018-03-02 17:35:22 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:35:22 INFO main - shutdown thread NettyEventExecuter interrupt false
+2018-03-02 17:35:22 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:35:22 INFO main - join thread NettyEventExecuter eclipse time(ms) 0 90000
+2018-03-02 17:35:22 INFO main - shutdown thread RebalanceService interrupt false
+2018-03-02 17:35:22 INFO RebalanceService - RebalanceService service end
+2018-03-02 17:35:22 INFO main - join thread RebalanceService eclipse time(ms) 0 90000
+2018-03-02 17:35:22 INFO main - the client factory [172.20.1.177@83854] shutdown OK
+2018-03-02 17:35:22 INFO main - the producer [ProducerGroupName] shutdown OK
+2018-03-02 17:35:22 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
+2018-03-02 17:37:57 INFO main - user specified name server address: localhost:9876
+2018-03-02 17:37:57 INFO main - created a new client Instance, FactoryIndex: 0 ClinetID: 172.20.1.177@83858 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.20.1.177, instanceName=83858, clientCallbackExecutorThreads=8, pollNameServerInteval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000] V3_2_6_SNAPSHOT
+2018-03-02 17:37:57 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => localhost/127.0.0.1:9876
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - closeChannel: the channel[localhost:9876] was removed from channel table
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
+2018-03-02 17:37:57 WARN main - createChannel: connect remote host[localhost:9876] failed, DefaultChannelPromise@5ea434c8(failure(java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876)
+java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:281)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO PullMessageService - PullMessageService service started
+2018-03-02 17:37:57 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2018-03-02 17:37:57 INFO RebalanceService - RebalanceService service started
+2018-03-02 17:37:57 INFO main - the client factory [172.20.1.177@83858] start OK
+2018-03-02 17:37:57 INFO main - the producer [spring-boot-test-producer-group] start OK
+2018-03-02 17:37:57 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => localhost/127.0.0.1:9876
+2018-03-02 17:37:57 WARN main - createChannel: connect remote host[localhost:9876] failed, DefaultChannelPromise@5d740a0f(failure(java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876)
+java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:281)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_2 - closeChannel: the channel[localhost:9876] was removed from channel table
+2018-03-02 17:37:57 WARN main - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+	at com.alibaba.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:641)
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1298)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:573)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:549)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:595)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:485)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1031)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1025)
+	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:95)
+	at com.example.mq2.Test.sendMsg(Test.java:39)
+	at com.example.mq2.Test.main(Test.java:24)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_2 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
+2018-03-02 17:37:57 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_3 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => localhost/127.0.0.1:9876
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_3 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 WARN main - createChannel: connect remote host[localhost:9876] failed, DefaultChannelPromise@214b199c(failure(java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876)
+java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:281)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_3 - closeChannel: the channel[localhost:9876] was removed from channel table
+2018-03-02 17:37:57 WARN main - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+	at com.alibaba.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:641)
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getDefaultTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1264)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:560)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:603)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:485)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1031)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1025)
+	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:95)
+	at com.example.mq2.Test.sendMsg(Test.java:39)
+	at com.example.mq2.Test.main(Test.java:24)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_3 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_3 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
+2018-03-02 17:37:57 INFO MQClientFactoryScheduledThread - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_4 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => localhost/127.0.0.1:9876
+2018-03-02 17:37:57 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2018-03-02 17:37:57 INFO main - shutdown thread PullMessageService interrupt true
+2018-03-02 17:37:57 INFO PullMessageService - PullMessageService service end
+2018-03-02 17:37:57 WARN MQClientFactoryScheduledThread - createChannel: connect remote host[localhost:9876] failed, DefaultChannelPromise@40cfb449(failure(java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876)
+java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:281)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_4 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2018-03-02 17:37:57 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+	at com.alibaba.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:641)
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1298)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:573)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:549)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:543)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:225)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_4 - closeChannel: the channel[localhost:9876] was removed from channel table
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_4 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_4 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
+2018-03-02 17:37:57 INFO MQClientFactoryScheduledThread - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => localhost/127.0.0.1:9876
+2018-03-02 17:37:57 INFO main - closeChannel: begin close the channel[] Found: false
+2018-03-02 17:37:57 INFO main - closeChannel: the channel[] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 WARN MQClientFactoryScheduledThread - createChannel: connect remote host[localhost:9876] failed, DefaultChannelPromise@44f03888(failure(java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876)
+java.net.ConnectException: Connection refused: localhost/127.0.0.1:9876
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:281)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.lang.Thread.run(Thread.java:748)
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 
+2018-03-02 17:37:57 INFO main - shutdown thread NettyEventExecuter interrupt false
+2018-03-02 17:37:57 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2018-03-02 17:37:57 INFO main - join thread NettyEventExecuter eclipse time(ms) 0 90000
+2018-03-02 17:37:57 INFO main - shutdown thread RebalanceService interrupt false
+2018-03-02 17:37:57 INFO RebalanceService - RebalanceService service end
+2018-03-02 17:37:57 INFO main - join thread RebalanceService eclipse time(ms) 0 90000
+2018-03-02 17:37:57 INFO main - the client factory [172.20.1.177@83858] shutdown OK
+2018-03-02 17:37:57 INFO main - the producer [spring-boot-test-producer-group] shutdown OK
+2018-03-02 17:37:57 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[] result: true
