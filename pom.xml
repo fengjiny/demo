@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.winter</groupId>
-	<artifactId>springboot-mybatis-demo</artifactId>
+	<artifactId>springboot-docker-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot-mybatis-demo</name>
+	<name>springboot-docker-demo</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -123,15 +123,10 @@
 			<artifactId>junit-jupiter-api</artifactId>
 			<version>RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>junit</groupId>-->
+			<!--<artifactId>junit</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -144,10 +139,10 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>org.json</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.json</groupId>-->
+			<!--<artifactId>org.json</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>net.minidev</groupId>
 			<artifactId>json-smart</artifactId>
@@ -209,6 +204,23 @@
 					<configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
 					<overwrite>true</overwrite>
 					<verbose>true</verbose>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.13</version>
+				<configuration>
+					<imageName>${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
 				</configuration>
 			</plugin>
 		</plugins>

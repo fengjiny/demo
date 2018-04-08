@@ -78,4 +78,10 @@ public class UserController {
         mongoTemplate.insert(user);
         return "success";
     }
+
+    @ApiOperation("hello World")
+    @RequestMapping(value = "/hello", method = RequestMethod.POST)
+    public String helloWorld(){
+        return "Hello World!!!";
+    }
 }

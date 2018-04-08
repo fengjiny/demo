@@ -1,0 +1,65 @@
+Manifest-Version: 1.0
+Class-Path: mapstruct-1.0.0.Final.jar ognl-3.0.8.jar jboss-logging-3.3
+ .1.Final.jar spring-expression-4.3.10.RELEASE.jar spring-data-elastic
+ search-2.1.6.RELEASE.jar spring-test-4.3.12.RELEASE.jar jackson-dataf
+ ormat-cbor-2.8.9.jar rocketmq-client-4.1.0-incubating.jar junit-jupit
+ er-api-5.1.0.jar thymeleaf-2.1.5.RELEASE.jar classmate-1.3.3.jar luce
+ ne-analyzers-common-5.5.4.jar lucene-core-5.5.4.jar mpxj-7.1.0.jar lu
+ cene-suggest-5.5.4.jar swagger-annotations-1.5.10.jar c3p0-0.9.1.1.ja
+ r spring-boot-starter-data-redis-1.5.2.RELEASE.jar slf4j-api-1.7.25.j
+ ar commons-pool2-2.4.2.jar t-digest-3.0.jar spring-boot-starter-loggi
+ ng-1.5.6.RELEASE.jar druid-spring-boot-starter-1.1.0.jar lucene-group
+ ing-5.5.4.jar springfox-swagger-common-2.6.1.jar sqlite-jdbc-3.15.1.j
+ ar compress-lzf-1.0.2.jar lucene-join-5.5.4.jar netty-3.10.6.Final.ja
+ r jgoodies-binding-2.10.0.jar rocketmq-common-4.1.0-incubating.jar lu
+ cene-highlighter-5.5.4.jar commons-codec-1.10.jar swagger-models-1.5.
+ 10.jar jackson-annotations-2.8.0.jar snakeyaml-1.17.jar rocketmq-remo
+ ting-4.1.0-incubating.jar rocketmq-common-3.2.6.jar jackson-databind-
+ 2.8.9.jar lucene-backward-codecs-5.5.4.jar gson-2.8.1.jar springfox-s
+ pring-web-2.6.1.jar jedis-2.9.0.jar fastjson-1.2.3.jar rocketmq-clien
+ t-3.2.6.jar spring-boot-starter-1.5.6.RELEASE.jar spring-data-keyvalu
+ e-1.2.6.RELEASE.jar HdrHistogram-2.1.6.jar mysql-connector-java-5.1.3
+ 5.jar druid-1.0.11.jar spring-boot-starter-web-1.5.6.RELEASE.jar spri
+ ng-data-redis-1.8.6.RELEASE.jar guava-18.0.jar lucene-sandbox-5.5.4.j
+ ar spring-boot-starter-tomcat-1.5.6.RELEASE.jar tomcat-embed-core-8.5
+ .16.jar lombok-1.16.12.jar hibernate-validator-5.3.5.Final.jar elasti
+ csearch-2.4.5.jar spring-plugin-core-1.2.0.RELEASE.jar groovy-2.4.12.
+ jar tomcat-juli-8.5.16.jar spring-jdbc-4.3.10.RELEASE.jar hamcrest-co
+ re-1.3.jar spring-webmvc-4.3.10.RELEASE.jar spring-boot-configuration
+ -processor-1.5.6.RELEASE.jar poi-3.17.jar spring-boot-starter-jdbc-1.
+ 5.6.RELEASE.jar spring-oxm-4.3.10.RELEASE.jar springfox-swagger2-2.6.
+ 1.jar spring-beans-4.3.10.RELEASE.jar spring-data-commons-1.13.6.RELE
+ ASE.jar junit-platform-commons-1.1.0.jar apiguardian-api-1.0.0.jar pa
+ gehelper-5.0.3.jar spring-boot-starter-data-elasticsearch-1.5.6.RELEA
+ SE.jar spring-boot-starter-data-mongodb-1.5.6.RELEASE.jar spring-cont
+ ext-support-4.3.10.RELEASE.jar mybatis-spring-boot-starter-1.3.0.jar 
+ thymeleaf-layout-dialect-1.4.0.jar spring-plugin-metadata-1.2.0.RELEA
+ SE.jar tomcat-embed-websocket-8.5.16.jar lucene-queries-5.5.4.jar bso
+ n-3.4.2.jar mongodb-driver-core-3.4.2.jar unbescape-1.1.0.RELEASE.jar
+  spring-boot-rocketmq-starter-0.0.3.RELEASE.jar lucene-misc-5.5.4.jar
+  lucene-memory-5.5.4.jar quartz-2.2.1.jar jgoodies-common-1.7.0.jar j
+ cl-over-slf4j-1.7.25.jar jul-to-slf4j-1.7.25.jar validation-api-1.1.0
+ .Final.jar lucene-spatial-5.5.4.jar javassist-3.21.0-GA.jar joda-time
+ -2.9.9.jar quartz-jobs-2.2.1.jar spring-data-mongodb-1.10.6.RELEASE.j
+ ar rocketmq-remoting-3.2.6.jar accessors-smart-1.1.jar jackson-dataty
+ pe-joda-2.8.9.jar spring-tx-4.3.10.RELEASE.jar spring-boot-autoconfig
+ ure-1.5.6.RELEASE.jar securesm-1.0.jar mybatis-spring-boot-autoconfig
+ ure-1.3.0.jar spring-boot-1.5.6.RELEASE.jar logback-classic-1.1.11.ja
+ r mybatis-3.4.4.jar pagehelper-spring-boot-autoconfigure-1.1.2.jar to
+ mcat-jdbc-8.5.16.jar springfox-core-2.6.1.jar hppc-0.7.1.jar springfo
+ x-swagger-ui-2.6.1.jar jackson-dataformat-yaml-2.8.9.jar commons-coll
+ ections4-4.1.jar json-smart-2.2.1.jar spring-core-4.3.10.RELEASE.jar 
+ jackson-core-2.8.9.jar spring-aop-4.3.10.RELEASE.jar pagehelper-sprin
+ g-boot-starter-1.1.2.jar spring-web-4.3.10.RELEASE.jar mybatis-spring
+ -1.3.1.jar commons-lang3-3.4.jar spatial4j-0.5.jar lucene-spatial3d-5
+ .5.4.jar springfox-spi-2.6.1.jar asm-5.0.3.jar mongodb-driver-3.4.2.j
+ ar tools.jar jconsole.jar jsqlparser-1.0.jar logback-core-1.1.11.jar 
+ lucene-queryparser-5.5.4.jar jsr166e-1.1.0.jar commons-lang-2.6.jar c
+ ommons-cli-1.3.1.jar jackson-dataformat-smile-2.8.9.jar netty-all-4.0
+ .25.Final.jar springfox-schema-2.6.1.jar android-json-0.0.20131108.va
+ adin1.jar spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar log4j-over-
+ slf4j-1.7.25.jar thymeleaf-spring4-2.1.5.RELEASE.jar spring-context-4
+ .3.10.RELEASE.jar jackson-module-parameter-names-2.8.9.jar junit-4.12
+ .jar tomcat-embed-el-8.5.16.jar opentest4j-1.0.0.jar
+Main-Class: com.example.DemoApplication
+
