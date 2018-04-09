@@ -7,6 +7,7 @@ import com.example.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.ibatis.annotations.Param;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class UserController {
     @ApiImplicitParam(name = "user", value = "用户实体user", required = true, dataType = "User")
     @ResponseBody
     @RequestMapping(value = "/add",method = RequestMethod.POST,produces = {"application/json;charset=UTF-8"})
-    public int addUser(User user) {
+    public int addUser(@ApiParam("user") @RequestBody User user) {
         return userService.addUser(user);
     }
 
