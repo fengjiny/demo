@@ -38,7 +38,9 @@ public class SwaggerConfiguration {
     // 要显示的 api
     private Predicate<String> paths() {
         return or(
-                regex("/user.*")
+                regex("/user.*"),
+                regex("/redis.*"),
+                regex("/mongo.*")
         );
     }
 }
