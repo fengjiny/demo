@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import com.alibaba.druid.sql.visitor.functions.Left;
+import com.example.model.LeftRightDeadLock;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,31 +40,30 @@ public class TestController {
     }
     @RequestMapping(value = "/deadLock.do", method = RequestMethod.POST)
     public void deadLock(@RequestParam("times") int times) {
+        LeftRightDeadLock a = new LeftRightDeadLock();
         for (int i = 0; i < times; ++i) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    B b = new B();
-                    b.methodB();
-                    C c = new C();
-                    c.methodC();
+                    try {
+                        Thread.sleep(100);
+                        a.leftRight();
+                    } catch (InterruptedException i) {
+
+                    }
                 }
             }).start();
-        }
-    }
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(100);
+                        a.rightLeft();
+                    } catch (InterruptedException i) {
 
-    class B{
-        private C c = new C();
-        public synchronized void methodB() {
-            c.methodC();
-        }
-
-    }
-
-    class C {
-        private B b = new B();
-        public synchronized void methodC() {
-            b.methodB();
+                    }
+                }
+            }).start();
         }
     }
 }
