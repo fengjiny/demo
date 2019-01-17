@@ -1,6 +1,5 @@
 package com.example.mongodb;
 
-import com.example.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
